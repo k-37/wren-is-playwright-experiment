@@ -1,0 +1,22 @@
+{
+  "name": "wren-is-playwright-experiment",
+  "version": "1.0.0",
+  "description": "This repository is used to practice [Playwright](https://en.wikipedia.org/wiki/Playwright_(software)) 🎭.",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/k-37/wren-is-playwright-experiment.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/k-37/wren-is-playwright-experiment/issues"
+  },
+  "homepage": "https://github.com/k-37/wren-is-playwright-experiment#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.52.0",
+    "@types/node": "^22.14.1"
+  }
+}
