@@ -25,6 +25,46 @@ Use the [`ms-playwright.playwright`](https://marketplace.visualstudio.com/items?
 
     npx playwright test --ui
 
+# Usage
+
+Run the end-to-end tests:
+
+    npx playwright test
+
+Start the interactive UI mode:
+
+    npx playwright test --ui
+
+Run tests in headed mode to visually see how Playwright interacts with the website:
+
+    npx playwright test --headed
+
+Run the tests on desktop Firefox and Chrome:
+
+    npx playwright test --project firefox --project=chromium
+
+Run the tests in a specific file:
+
+    npx playwright test <PATH_TO_FILE>
+
+Run the tests in debug mode:
+
+    npx playwright test --debug
+
+Run last failed tests:
+
+    npx playwright test --last-failed
+
+Auto generate tests with Codegen:
+
+    npx playwright codegen <URL_OF_THE_WEBSITE_YOU_WANT_TO_GENERATE_TESTS_FOR>
+
+Update Playwright:
+
+    npm install -D @playwright/test@latest
+    # Also download new browser binaries and their dependencies:
+    npx playwright install --with-deps
+
 # Acknowledgements
 
 Everything here is heavily influenced by these great projects:
