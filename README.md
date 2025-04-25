@@ -70,6 +70,7 @@ Update Playwright:
 Everything here is heavily influenced by these great projects:
 
 - [Official Playwright documentation](https://playwright.dev/docs/intro)
+- [microsoft/playwright-examples](https://github.com/microsoft/playwright-examples)
 
 Big thank you for all the ~~🐛~~ worms goes to them. 🙏
 
