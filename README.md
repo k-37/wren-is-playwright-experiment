@@ -29,7 +29,7 @@ Use the [`ms-playwright.playwright`](https://marketplace.visualstudio.com/items?
 
 Run the end-to-end tests:
 
-    npx playwright test
+    npm run test
 
 Start the interactive UI mode:
 
@@ -64,6 +64,10 @@ Update Playwright:
     npm install -D @playwright/test@latest
     # Also download new browser binaries and their dependencies:
     npx playwright install --with-deps
+
+Run ESLint:
+
+    npx eslint tests/**
 
 # Acknowledgements
 
