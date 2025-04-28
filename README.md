@@ -65,9 +65,17 @@ Update Playwright:
     # Also download new browser binaries and their dependencies:
     npx playwright install --with-deps
 
-Run ESLint:
+Run ESLint to statically analyze your code to quickly find problems:
 
     npx eslint tests/**
+
+Check formatting with Prettier:
+
+    npx prettier . --check
+
+Format all files with Prettier:
+
+    npx prettier . --write
 
 # Acknowledgements
 
