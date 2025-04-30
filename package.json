@@ -4,7 +4,7 @@
   "description": "This repository is used to practice [Playwright](https://en.wikipedia.org/wiki/Playwright_(software)) 🎭.",
   "main": "index.js",
   "scripts": {
-    "pretest": "npx prettier . --check && tsc --noEmit && npx eslint tests/**",
+    "pretest": "prettier . --check && tsc --noEmit && eslint tests/**",
     "test": "playwright test --project firefox"
   },
   "repository": {
