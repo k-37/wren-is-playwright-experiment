@@ -10,10 +10,24 @@ test('page should have title', async ({ page }) => {
   await expect(page).toHaveTitle(/Playwright/);
 });
 
-test('code menu should contain download zip link', async ({ page }) => {
+test('code menu on code tab should have download zip link', async ({
+  page,
+}) => {
   const githubProject = new GitHubProjectPage(page);
+
   await githubProject.goto(PLAYWRIGHT_PROJECT_URL);
-  await expect(githubProject.downloadZipLink).toBeHidden();
-  await githubProject.clickCode();
-  await expect(githubProject.downloadZipLink).toBeVisible();
+
+  await expect(githubProject.codeTab.downloadZipLinkOnCodeMenu).toBeHidden();
+  await githubProject.codeTab.openCodeMenu();
+  await expect(githubProject.codeTab.downloadZipLinkOnCodeMenu).toBeVisible();
+});
+
+test('issues tab should have new issue link', async ({ page }) => {
+  const githubProject = new GitHubProjectPage(page);
+
+  await githubProject.goto(PLAYWRIGHT_PROJECT_URL);
+
+  await expect(githubProject.issuesTab.newIssueLink).toBeHidden();
+  await githubProject.issuesTab.openIssuesTab();
+  await expect(githubProject.issuesTab.newIssueLink).toBeVisible();
 });
