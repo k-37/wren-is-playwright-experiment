@@ -17,9 +17,13 @@ test('code menu on code tab should have download zip link', async ({
 
   await githubProject.goto(PLAYWRIGHT_PROJECT_URL);
 
-  await expect(githubProject.codeTab.downloadZipLinkOnCodeMenu).toBeHidden();
-  await githubProject.codeTab.openCodeMenu();
-  await expect(githubProject.codeTab.downloadZipLinkOnCodeMenu).toBeVisible();
+  await expect(
+    githubProject.locatorDownloadZipLinkOnCodeMenuOnCodeTab(),
+  ).toBeHidden();
+  await githubProject.openCodeMenuOnCodeTab();
+  await expect(
+    githubProject.locatorDownloadZipLinkOnCodeMenuOnCodeTab(),
+  ).toBeVisible();
 });
 
 test('issues tab should have new issue link', async ({ page }) => {
@@ -27,7 +31,7 @@ test('issues tab should have new issue link', async ({ page }) => {
 
   await githubProject.goto(PLAYWRIGHT_PROJECT_URL);
 
-  await expect(githubProject.issuesTab.newIssueLink).toBeHidden();
-  await githubProject.issuesTab.openIssuesTab();
-  await expect(githubProject.issuesTab.newIssueLink).toBeVisible();
+  await expect(githubProject.locatorNewIssueLinkOnIssuesTab()).toBeHidden();
+  await githubProject.openIssuesTab();
+  await expect(githubProject.locatorNewIssueLinkOnIssuesTab()).toBeVisible();
 });

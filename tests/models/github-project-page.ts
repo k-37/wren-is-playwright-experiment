@@ -1,7 +1,7 @@
 import { expect, type Locator, type Page } from '@playwright/test';
 
 class CodeTab {
-  readonly page: Page;
+  private readonly page: Page;
 
   readonly codeMenu: Locator;
   readonly cloneTextOnCodeMenu: Locator;
@@ -25,7 +25,7 @@ class CodeTab {
 }
 
 class IssuesTab {
-  readonly page: Page;
+  private readonly page: Page;
 
   readonly issuesTab: Locator;
   readonly searchIssuesBox: Locator;
@@ -49,10 +49,10 @@ class IssuesTab {
 }
 
 export class GitHubProjectPage {
-  readonly page: Page;
+  private readonly page: Page;
 
-  readonly codeTab: CodeTab;
-  readonly issuesTab: IssuesTab;
+  private readonly codeTab: CodeTab;
+  private readonly issuesTab: IssuesTab;
 
   constructor(page: Page) {
     this.page = page;
@@ -63,5 +63,21 @@ export class GitHubProjectPage {
 
   async goto(url: string) {
     await this.page.goto(url);
+  }
+
+  locatorDownloadZipLinkOnCodeMenuOnCodeTab(): Locator {
+    return this.codeTab.downloadZipLinkOnCodeMenu;
+  }
+
+  locatorNewIssueLinkOnIssuesTab(): Locator {
+    return this.issuesTab.newIssueLink;
+  }
+
+  async openCodeMenuOnCodeTab() {
+    await this.codeTab.openCodeMenu();
+  }
+
+  async openIssuesTab() {
+    await this.issuesTab.openIssuesTab();
   }
 }
