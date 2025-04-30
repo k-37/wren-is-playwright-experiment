@@ -65,16 +65,19 @@ Update Playwright:
     # Also download new browser binaries and their dependencies:
     npx playwright install --with-deps
 
-Run ESLint to statically analyze your code to quickly find problems:
+Run [ESLint](https://typescript-eslint.io/) to statically analyze your code to quickly find problems, using either of the commands:
 
+    npm run lint
     npx eslint tests/**
 
-Check formatting with Prettier:
+Check formatting with [Prettier](https://prettier.io/), using either of the commands:
 
+    npm run format
     npx prettier . --check
 
-Format all files with Prettier:
+Format all files with Prettier, using either of the commands:
 
+    npm run format:fix
     npx prettier . --write
 
 # Acknowledgements

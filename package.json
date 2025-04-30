@@ -4,8 +4,13 @@
   "description": "This repository is used to practice [Playwright](https://en.wikipedia.org/wiki/Playwright_(software)) 🎭.",
   "main": "index.js",
   "scripts": {
-    "pretest": "prettier . --check && tsc --noEmit && eslint tests/**",
-    "test": "playwright test --project firefox"
+    "pretest": "npm run format && tsc --noEmit && npm run lint",
+    "test": "playwright test --project firefox",
+    "format": "prettier . --check",
+    "format:fix": "prettier . --write",
+    "lint": "eslint tests/**",
+    "lint:fix": "eslint tests/** --fix",
+    "prepare": "husky"
   },
   "repository": {
     "type": "git",
@@ -24,6 +29,7 @@
     "@types/node": "^22.14.1",
     "eslint": "^9.25.1",
     "eslint-config-prettier": "^10.1.2",
+    "husky": "^9.1.7",
     "prettier": "3.5.3",
     "typescript": "^5.8.3",
     "typescript-eslint": "^8.31.0"
