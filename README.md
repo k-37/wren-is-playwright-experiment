@@ -2,7 +2,7 @@
 
 This repository is used to practice [Playwright](https://en.wikipedia.org/wiki/Playwright_(software)) 🎭.
 
-For this simple example project we will be testing [GitHub page of Playwright](https://github.com/microsoft/playwright).
+For this example project we will be testing [GitHub page of Playwright](https://github.com/microsoft/playwright). Tests are kept simple intentionally to showcase Playwright features without losing sight of the trees for the forest.
 
 🐦
 
@@ -28,7 +28,7 @@ After cloning current repository in the root of the project execute:
     npx playwright install # Install Playwright browsers
     sudo npx playwright install-deps # Install Playwright operating system dependencies
 
-Use the [`ms-playwright.playwright`](https://marketplace.visualstudio.com/items?itemName=ms-playwright.playwright) extension for [Visual Studio Code](https://en.wikipedia.org/wiki/Visual_Studio_Code) to run the tests in the [`./tests`](tests) folder from VS Code or run the following command in the terminal:
+Use the [`ms-playwright.playwright`](https://marketplace.visualstudio.com/items?itemName=ms-playwright.playwright) extension for [Visual Studio Code](https://en.wikipedia.org/wiki/Visual_Studio_Code) to run the tests in the [`./tests`](tests) folder [from VS Code](https://playwright.dev/docs/getting-started-vscode) or run the following command in the terminal:
 
     npx playwright test --ui
 
