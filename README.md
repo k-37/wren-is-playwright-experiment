@@ -8,7 +8,7 @@ For this simple example project we will be testing [GitHub page of Playwright](h
 
 ## Highlights
 
-- [Page object models](https://martinfowler.com/bliki/PageObject.html) at [commit](https://github.com/k-37/wren-is-playwright-experiment/commit/171c75895ef8ec28f062185a4dc912be76acf877), [commit](https://github.com/k-37/wren-is-playwright-experiment/commit/fc41c758602afcc72fb56321a365462737c68b31) and [commit](https://github.com/k-37/wren-is-playwright-experiment/commit/1c10026899bd9cdefdf8a9e4ca520678d831b020).
+- [Page object models](https://martinfowler.com/bliki/PageObject.html) at [commit](https://github.com/k-37/wren-is-playwright-experiment/commit/1e06ff0f5dff5225919370a2e16f675b10e9d49c).
 - Linting and type checking with [ESLint](https://typescript-eslint.io/) at [commit](https://github.com/k-37/wren-is-playwright-experiment/commit/0d4aced0c4a4f00b8fb7ed6285424d569d54283d).
 - Code formatting with [Prettier](https://prettier.io/) at [commit](https://github.com/k-37/wren-is-playwright-experiment/commit/ea93e2f7edf0892a669ec4d7372c1971ee0dfa1f).
 - Any time you try to make a commit, automatically lint and check code formatting with [Husky](https://typicode.github.io/husky/) at [commit](https://github.com/k-37/wren-is-playwright-experiment/commit/6e5169ae1963c4971625fae0f0a01b9e0b0a5a9b).
