@@ -5,31 +5,32 @@ import { SwitchPageFragment } from './models/pages/fragments/switch-page';
 
 const CODE_URL = 'https://github.com/microsoft/playwright';
 
-test('code page should have title', async ({ page }) => {
-  await page.goto(CODE_URL);
+test.describe('code page', () => {
+  test.beforeEach(async ({ page }) => {
+    const codePage = new CodePage(page);
 
-  // Expect a title "to contain" a substring.
-  await expect(page).toHaveTitle(/Playwright/);
-});
+    await codePage.goto(CODE_URL);
+  });
 
-test('code card should have download zip link', async ({ page }) => {
-  const codePage = new CodePage(page);
+  test('should have title', async ({ page }) => {
+    // Expect a title "to contain" a substring.
+    await expect(page).toHaveTitle(/Playwright/);
+  });
 
-  await codePage.goto(CODE_URL);
+  test('code card should have download zip link', async ({ page }) => {
+    const codePage = new CodePage(page);
 
-  await expect(codePage.codeCard.downloadZipLink).toBeHidden();
-  await codePage.openCodeCard();
-  await expect(codePage.codeCard.downloadZipLink).toBeVisible();
-});
+    await expect(codePage.codeCard.downloadZipLink).toBeHidden();
+    await codePage.openCodeCard();
+    await expect(codePage.codeCard.downloadZipLink).toBeVisible();
+  });
 
-test('should be able to switch to issues page', async ({ page }) => {
-  const codePage = new CodePage(page);
-  const issuesPage = new IssuesPage(page);
-  const switchPageFragment = new SwitchPageFragment(page);
+  test('should be able to switch to issues page', async ({ page }) => {
+    const issuesPage = new IssuesPage(page);
+    const switchPageFragment = new SwitchPageFragment(page);
 
-  await codePage.goto(CODE_URL);
-
-  await expect(issuesPage.searchIssuesBox).toBeHidden();
-  await switchPageFragment.toIssues();
-  await expect(issuesPage.searchIssuesBox).toBeVisible();
+    await expect(issuesPage.searchIssuesBox).toBeHidden();
+    await switchPageFragment.toIssues();
+    await expect(issuesPage.searchIssuesBox).toBeVisible();
+  });
 });
