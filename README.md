@@ -2,13 +2,14 @@
 
 This repository is used to practice [Playwright](https://en.wikipedia.org/wiki/Playwright_(software)) 🎭.
 
-For this example project we will be testing [GitHub page of Playwright](https://github.com/microsoft/playwright). Tests are kept simple intentionally to showcase Playwright features without losing sight of the trees for the forest.
+For this example project we will be testing [GitHub page of Playwright](https://github.com/microsoft/playwright). Tests are intentionally kept simple to showcase Playwright features without losing sight of the trees for the forest.
 
 🐦
 
 ## Highlights
 
 - [Page object models](https://martinfowler.com/bliki/PageObject.html) at [commit](https://github.com/k-37/wren-is-playwright-experiment/commit/1e06ff0f5dff5225919370a2e16f675b10e9d49c).
+- [Fixtures](https://playwright.dev/docs/test-fixtures) at [commit](https://github.com/k-37/wren-is-playwright-experiment/commit/e7cf64d5625fdfc56f16cdad2e34326e36c7fe66).
 - Linting and type checking with [ESLint](https://typescript-eslint.io/) at [commit](https://github.com/k-37/wren-is-playwright-experiment/commit/0d4aced0c4a4f00b8fb7ed6285424d569d54283d).
 - Code formatting with [Prettier](https://prettier.io/) at [commit](https://github.com/k-37/wren-is-playwright-experiment/commit/ea93e2f7edf0892a669ec4d7372c1971ee0dfa1f).
 - Any time you try to make a commit, automatically lint and check code formatting with [Husky](https://typicode.github.io/husky/) at [commit](https://github.com/k-37/wren-is-playwright-experiment/commit/6e5169ae1963c4971625fae0f0a01b9e0b0a5a9b).
