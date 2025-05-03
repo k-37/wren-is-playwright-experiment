@@ -9,6 +9,7 @@ For this example project we will be testing [GitHub page of Playwright](https://
 ## Highlights
 
 - [Page object models](https://martinfowler.com/bliki/PageObject.html) at [commit](https://github.com/k-37/wren-is-playwright-experiment/commit/1e06ff0f5dff5225919370a2e16f675b10e9d49c).
+- [Test hooks](https://playwright.dev/docs/writing-tests#using-test-hooks) at [commit](https://github.com/k-37/wren-is-playwright-experiment/commit/d4c76a9c02c6229d6e0853067bd631d52a98fac7).
 - [Fixtures](https://playwright.dev/docs/test-fixtures) at [commit](https://github.com/k-37/wren-is-playwright-experiment/commit/e7cf64d5625fdfc56f16cdad2e34326e36c7fe66).
 - Linting and type checking with [ESLint](https://typescript-eslint.io/) at [commit](https://github.com/k-37/wren-is-playwright-experiment/commit/0d4aced0c4a4f00b8fb7ed6285424d569d54283d).
 - Code formatting with [Prettier](https://prettier.io/) at [commit](https://github.com/k-37/wren-is-playwright-experiment/commit/ea93e2f7edf0892a669ec4d7372c1971ee0dfa1f).
