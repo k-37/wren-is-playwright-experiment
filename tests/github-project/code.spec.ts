@@ -1,10 +1,8 @@
 import { test, expect } from './fixtures/base';
 
-const CODE_URL = 'https://github.com/microsoft/playwright';
-
 test.describe('code page', () => {
   test.beforeEach(async ({ codePage }) => {
-    await codePage.goto(CODE_URL);
+    await codePage.goto();
   });
 
   test('should have title', async ({ page }) => {

@@ -12,12 +12,14 @@ class CodeCard {
 }
 
 export class CodePage extends BasePage {
+  readonly url: string;
   readonly codeButton: Locator;
   readonly codeCard: CodeCard;
 
   constructor(page: Page) {
     super(page);
 
+    this.url = 'https://github.com/microsoft/playwright';
     this.codeButton = page.getByRole('button', { name: 'Code' });
     this.codeCard = new CodeCard(page);
   }
